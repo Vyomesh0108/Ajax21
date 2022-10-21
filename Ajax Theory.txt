@@ -1,0 +1,24 @@
+Ajax :-
+
+-> Ajax stands for "Asynchronous javaScript and XML".
+-> It is a new technic for creating better, faster & more interactive web application with the help of XML, HTML, CSS & javaScript.
+-> It allows you to send only important information to the server & not entire page.
+-> So, only valuable data from the client is routed to the server side.
+-> It makes sure application interactive & faster.
+-> It is the most valuable RIA (Rich Internet Application) technology.
+
+
+* Advantages :-
+
+-> It reduce the server traffic & increase the speed.
+-> Ajax is responsible & time taken is also less.
+-> It can validate the form data.
+-> Bandwidth usage can be reduced.
+-> Asynchronous call can be made which reduces the time for data arrival.
+
+
+* Disadvantages :-
+
+-> It is open-source.
+-> It's request can be created only in newly created web browser.
+-> It can access information from only one server.
