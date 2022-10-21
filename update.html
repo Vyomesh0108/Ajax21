@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+
+            function updatedata()
+            {
+                var id = f1.tid.value;
+                var na = f1.tna.value;
+                var ag = f1.tag.value;
+
+                $.ajax({
+
+                    type : "POST",
+                    url : "update.php",
+                    data : {"id" : id, "name" : na, "age" : ag},
+                    success : function(response)
+                    {
+                        document.getElementById("abc").innerHTML = response;
+                    }
+                });
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <form name="f1" method="POST">
+
+            Id : <input type="text" name="tid"> <br>
+            Name : <input type="text" name="tna"> <br>
+            Age : <input type="text" name="tag"> <br><br>
+
+            <input type="button" name="b1" value="Update Data" onclick="updatedata()">
+
+        </form>
+
+        <br><br>
+
+        <div id="abc"></div>
+
+    </body>
+</html>

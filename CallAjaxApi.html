@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+        <script>
+
+            function show()
+            {
+                var request = new XMLHttpRequest();
+
+                request.onreadystatechange = function()
+                {
+                    if(this.readyState == 4 && this.status == 200)
+                    {
+                        document.getElementById("abc").innerHTML = this.responseText;
+                    }
+                }
+
+                request.open("POST","showdata.php",true);   // True means it will be asynchronous call
+                request.send();
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <form name="f1" method="post">
+
+            <input type="button" name="b1" value="Show Data" onclick="show()">
+
+        </form>
+
+        <br><br>
+
+        <div id="abc"> Data Will Displayed Here !!! </div>
+        <br><br>
+
+        <h1> End Of Program </h1>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+
+            function deletedata()
+            {
+                var id = f1.tid.value;
+
+                $.ajax({
+
+                    type : "POST",
+                    url : "delete.php",
+                    data : {"id" : id},
+                    success : function(response)
+                    {
+                        document.getElementById("abc").innerHTML = response;
+                    }
+                });
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <form name="f1" method="POST">
+
+            Id : <input type="text" name="tid"> <br><br>
+
+            <input type="button" name="b1" value="Delete Data" onclick="deletedata()">
+
+        </form>
+
+        <br><br>
+
+        <div id="abc"></div>
+
+    </body>
+</html>
